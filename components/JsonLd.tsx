@@ -6,7 +6,7 @@ const data = {
   additionalType: "https://schema.org/EducationalOrganization",
   name: "느낌표수학학원",
   description:
-    "주엽동 초·중등 수학전문 학원. 무학년제, 풀이설계력 훈련, 내신 4주 집중관리",
+    "주엽동 초·중등 수학전문 학원. 풀이설계력 훈련, 내신 4주 집중관리",
   url: "https://exclamath.com",
   image: "https://exclamath.com/opengraph-image",
   telephone: "+82-31-912-1538",

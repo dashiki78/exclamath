@@ -23,12 +23,6 @@ export default function Program() {
         </div>
 
         <div className="sub-block reveal">
-          <h3>학년이 아니라, 학생에 맞춥니다 — 무학년제</h3>
-          <p>졸업 전에 고등 과정을 완성하려면 학년표를 따라가서는 어렵습니다. 그래서 느낌표수학의 과정은 초등부터 고등까지 하나로 이어져 있고, 학년으로 나누지 않습니다.</p>
-          <p>같은 중2라도 어떤 학생은 중등 개념을 다시 다져야 하고, 어떤 학생은 고등 과정을 시작할 준비가 되어 있습니다. 진단을 통해 학생이 지금 서 있는 자리를 확인하고, 거기서 시작해 자기 속도로 올라갑니다.</p>
-        </div>
-
-        <div className="sub-block reveal">
           <h3>과정 로드맵 — 초등에서 고등까지</h3>
           <div className="road">
             <div className="stage">

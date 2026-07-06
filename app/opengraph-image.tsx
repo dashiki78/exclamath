@@ -6,7 +6,7 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt = "느낌표수학학원 — 풀이를 설계하는 아이로 키웁니다";
 
-const TEXT = "풀이를 설계하는 아이로 키웁니다느낌표수학학원 주엽동 수학전문 · 초·중등 · 무학년제!";
+const TEXT = "풀이를 설계하는 아이로 키웁니다느낌표수학학원 주엽동 수학전문 · 초·중등!";
 
 // 구글 폰트에서 노출 텍스트만 서브셋한 TTF를 받아 satori에 전달
 async function loadFont(): Promise<ArrayBuffer> {
@@ -65,7 +65,7 @@ export default async function OgImage() {
           아이로 키웁니다
         </div>
         <div style={{ fontSize: 30, fontWeight: 900, marginTop: 44, opacity: 0.85 }}>
-          느낌표수학학원 · 주엽동 수학전문 · 초·중등 · 무학년제
+          느낌표수학학원 · 주엽동 수학전문 · 초·중등
         </div>
       </div>
     ),

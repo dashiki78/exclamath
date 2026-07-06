@@ -11,14 +11,6 @@ export default function Contact() {
         <div className="addr reveal">
           <strong>느낌표수학학원</strong>
           경기 고양시 일산서구 주엽로 134 시대프라자 9층
-          <a
-            className="map-btn"
-            href="https://map.naver.com/p/search/%EB%8A%90%EB%82%8C%ED%91%9C%EC%88%98%ED%95%99%ED%95%99%EC%9B%90"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            네이버 지도에서 보기 →
-          </a>
           <p className="map-note">주엽역 인근 · 건물 주차 가능</p>
         </div>
       </div>

@@ -6,12 +6,12 @@ export default function Admission() {
         <h2 className="sec-title reveal">시작은 전화 한 통이면 됩니다</h2>
         <div className="steps">
           <div className="step reveal">
-            <h3>전화 상담</h3>
-            <p>학생의 학년, 현재 공부 상황, 걱정되는 부분을 편하게 들려주세요. 이 통화에서 등록을 권하지 않습니다. 먼저 학생에게 맞는지부터 함께 봅니다.</p>
+            <h3>전화로 방문 상담 예약</h3>
+            <p>전화로는 방문 상담 일정을 잡습니다. 학생의 학년과 상황을 간단히 알려주시고, 방문하실 시간을 함께 정해 주세요. 자세한 이야기는 만나서 나눕니다.</p>
             <a className="step-tel" href="tel:0319121538">☎ 031-912-1538</a>
           </div>
           <div className="step reveal">
-            <h3>진단 테스트 <small>약 40분</small></h3>
+            <h3>방문 상담 · 진단 테스트 <small>약 40분</small></h3>
             <p>점수를 매기는 시험이 아니라, 학생이 어느 과정에서 시작해야 하는지 찾는 과정입니다. 문제를 어떻게 읽고 어떤 방식으로 접근하는지, 생각의 습관까지 함께 봅니다.</p>
           </div>
           <div className="step reveal">
