@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function TimetablePage() {
   return (
     <main>
-      <section className="notice-section">
+      <section className="page-section">
         <div className="wrap">
           <span className="eyebrow">시간표</span>
           <h1 className="sec-title">{timetable.month} 수업 시간표</h1>

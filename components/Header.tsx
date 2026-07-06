@@ -32,12 +32,7 @@ export default function Header() {
         </div>
       </div>
       <nav className={open ? "open" : ""}>
-        <a href="/#philosophy" onClick={close}>학습 철학</a>
-        <a href="/#program" onClick={close}>학습 프로그램</a>
         <Link href="/timetable" onClick={close}>시간표</Link>
-        <a href="/#admission" onClick={close}>입학 안내</a>
-        <a href="/#contact" onClick={close}>오시는 길</a>
-        <Link href="/notice" onClick={close}>공지사항</Link>
         <a
           href="https://blog.naver.com/exclamathma"
           target="_blank"
