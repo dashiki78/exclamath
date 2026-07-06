@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   description:
     "주엽동 수학학원 느낌표수학. 중학교 졸업 전 고등 수학 전 과정을 상위권 수준으로 완성하고 진학합니다. 풀이설계력 훈련 · 내신 4주 집중관리 (한수중·오마중·발산중·대화중·장성중·신일중) ☎ 031-912-1538",
   alternates: { canonical: "/" },
+  verification: {
+    other: { "naver-site-verification": "0fc551efbacdfa5083f9fd25f17ebb444b5a533d" },
+  },
   openGraph: {
     title: "느낌표수학학원 | 주엽동 초·중등 수학전문 · 일산서구",
     description:
