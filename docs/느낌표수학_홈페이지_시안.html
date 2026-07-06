@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>느낌표수학학원 — 풀이를 설계하는 아이로 키웁니다</title>
+<meta name="description" content="주엽동 초·중등 수학전문 느낌표수학학원. 중학교 졸업 전, 고등 수학 전 과정을 상위권 수준으로 완성하고 진학합니다. 무학년제 · 풀이설계력 훈련 · 내신 4주 집중관리">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#2C3E50;
+  --blue:#3498DB;
+  --body:#34495E;
+  --ink:#22303E;
+  --mist:#F5F8FA;
+  --card:#EBF5FB;
+  --line:#DFE7EC;
+  --white:#FFFFFF;
+  --serif:'Noto Serif KR', serif;
+  --sans:'Pretendard Variable', Pretendard, -apple-system, sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  color:var(--body);
+  background:var(--white);
+  font-size:17px;
+  line-height:1.8;
+  word-break:keep-all;
+  letter-spacing:-0.01em;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:680px;margin:0 auto;padding:0 24px}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.hd{display:flex;align-items:center;justify-content:space-between;height:60px;max-width:680px;margin:0 auto;padding:0 20px}
+.logo{font-family:var(--serif);font-weight:900;font-size:19px;color:var(--navy);letter-spacing:-0.02em}
+.logo .bang{color:var(--blue)}
+.hd-right{display:flex;align-items:center;gap:14px}
+.hd-tel{font-weight:800;font-size:16px;color:var(--blue);letter-spacing:0}
+.hd-tel svg{vertical-align:-2px;margin-right:4px}
+.menu-btn{background:none;border:none;cursor:pointer;padding:6px;display:flex;flex-direction:column;gap:4px}
+.menu-btn span{display:block;width:20px;height:2px;background:var(--navy);transition:.2s}
+nav{display:none;border-top:1px solid var(--line);background:var(--white)}
+nav.open{display:block}
+nav a{display:block;padding:14px 24px;font-size:15px;font-weight:600;color:var(--navy);border-bottom:1px solid var(--mist)}
+nav a:last-child{border-bottom:none}
+
+/* ---------- hero ---------- */
+.hero{
+  background:linear-gradient(180deg,var(--mist) 0%,var(--white) 100%);
+  padding:84px 0 72px;
+  position:relative;overflow:hidden;
+  text-align:center;
+}
+.hero .bang-mark{
+  position:absolute;right:-30px;top:-60px;
+  font-family:var(--serif);font-weight:900;
+  font-size:340px;line-height:1;color:var(--blue);
+  opacity:.055;pointer-events:none;user-select:none;
+}
+.hero h1{
+  font-family:var(--serif);font-weight:900;
+  font-size:clamp(30px,7.4vw,42px);
+  line-height:1.42;color:var(--navy);
+  letter-spacing:-0.03em;
+}
+.hero .sub{margin-top:22px;font-size:16.5px;color:var(--body)}
+.hero .sub strong{font-weight:700;color:var(--navy)}
+.hero .meta{
+  margin-top:34px;font-size:13px;font-weight:600;
+  color:#7A8CA0;letter-spacing:.02em;
+}
+.hero .meta i{font-style:normal;color:var(--blue);margin:0 8px}
+.scroll-cue{margin-top:40px;color:var(--blue);font-size:20px;animation:bob 2.2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@media (prefers-reduced-motion:reduce){.scroll-cue{animation:none}.reveal{transition:none!important;opacity:1!important;transform:none!important}}
+
+/* ---------- sections ---------- */
+section{padding:76px 0}
+.eyebrow{
+  display:inline-block;font-size:13px;font-weight:800;
+  color:var(--blue);letter-spacing:.14em;margin-bottom:14px;
+}
+.eyebrow::before{content:"! ";font-family:var(--serif);font-weight:900}
+.sec-title{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(23px,5.6vw,29px);line-height:1.5;
+  color:var(--navy);letter-spacing:-0.02em;
+  margin-bottom:40px;
+}
+.block{margin-bottom:52px}
+.block:last-child{margin-bottom:0}
+.block h3{
+  font-family:var(--serif);font-weight:700;
+  font-size:20px;line-height:1.55;color:var(--navy);
+  margin-bottom:14px;letter-spacing:-0.02em;
+}
+.block h3 .no{
+  font-family:var(--sans);font-weight:800;font-size:13px;
+  color:var(--blue);display:block;margin-bottom:8px;letter-spacing:.1em;
+}
+.block p{margin-bottom:14px}
+.block p:last-child{margin-bottom:0}
+.block em{font-style:normal;font-weight:700;color:var(--navy)}
+
+/* ---------- goal band ---------- */
+.goal{
+  background:var(--navy);color:#DCE7F0;
+  padding:80px 0;text-align:center;position:relative;overflow:hidden;
+}
+.goal .bang-mark{
+  position:absolute;left:-40px;bottom:-90px;
+  font-family:var(--serif);font-weight:900;font-size:300px;line-height:1;
+  color:var(--blue);opacity:.1;pointer-events:none;
+}
+.goal .lead{font-size:15.5px;margin-bottom:22px;color:#AFC3D4}
+.goal h2{
+  font-family:var(--serif);font-weight:900;
+  font-size:clamp(25px,6.4vw,36px);line-height:1.56;
+  color:var(--white);letter-spacing:-0.02em;
+}
+.goal h2 .hl{color:#8FC6EC}
+.goal .after{
+  margin-top:26px;font-size:16px;line-height:1.85;color:#C4D4E2;
+  max-width:520px;margin-left:auto;margin-right:auto;
+}
+.goal .rule{width:44px;height:3px;background:var(--blue);margin:30px auto 0}
+
+/* ---------- program ---------- */
+.program{background:var(--mist)}
+.part-card{
+  background:var(--card);
+  border:2px solid var(--blue);
+  border-radius:10px;
+  padding:24px 22px;
+  margin-bottom:16px;
+}
+.part-card h4{
+  font-family:var(--serif);font-weight:700;font-size:17.5px;
+  color:var(--navy);margin-bottom:10px;
+}
+.part-card h4 .pn{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:24px;height:24px;border-radius:50%;
+  background:var(--blue);color:#fff;
+  font-family:var(--sans);font-size:13px;font-weight:800;
+  margin-right:9px;vertical-align:-3px;
+}
+.part-card h4 .tag{
+  display:inline-block;margin-left:8px;font-family:var(--sans);
+  font-size:12px;font-weight:800;color:var(--blue);
+  background:rgba(52,152,219,.12);border-radius:20px;padding:2px 10px;
+  vertical-align:2px;letter-spacing:.02em;
+}
+.part-card p{font-size:16px}
+.part-intro{margin-bottom:26px}
+
+.sub-block{margin-top:60px}
+.sub-block h3{
+  font-family:var(--serif);font-weight:700;font-size:20px;
+  color:var(--navy);margin-bottom:16px;letter-spacing:-0.02em;
+}
+.sub-block p{margin-bottom:14px}
+.sub-block p:last-child{margin-bottom:0}
+
+/* roadmap */
+.road{margin-top:26px;position:relative;padding-left:26px}
+.road::before{
+  content:"";position:absolute;left:7px;top:8px;bottom:8px;
+  width:2px;background:var(--line);
+}
+.stage{position:relative;padding-bottom:34px}
+.stage:last-child{padding-bottom:0}
+.stage::before{
+  content:"";position:absolute;left:-26px;top:7px;
+  width:16px;height:16px;border-radius:50%;
+  background:var(--white);border:4px solid var(--blue);
+}
+.stage.final::before{background:var(--blue)}
+.stage h4{
+  font-family:var(--serif);font-weight:700;font-size:17.5px;
+  color:var(--navy);margin-bottom:8px;
+}
+.stage h4 small{
+  font-family:var(--sans);font-weight:600;font-size:13px;
+  color:#7A8CA0;margin-left:8px;
+}
+.stage p{font-size:16px}
+.growth-note{
+  margin-top:26px;padding:16px 20px;background:var(--white);
+  border-left:3px solid var(--blue);border-radius:0 8px 8px 0;
+  font-size:15.5px;color:var(--navy);font-weight:600;
+}
+
+/* schools */
+.schools{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.schools span{
+  background:var(--white);border:1px solid var(--line);
+  border-radius:20px;padding:6px 14px;
+  font-size:14px;font-weight:700;color:var(--navy);
+}
+
+/* ---------- call bands ---------- */
+.callband{
+  background:var(--navy);border-radius:14px;
+  padding:34px 28px;margin-top:64px;text-align:center;color:#C4D4E2;
+}
+.callband p{font-size:15.5px;line-height:1.8}
+.callband .tel{
+  display:inline-block;margin:16px 0 8px;
+  font-size:clamp(26px,7vw,32px);font-weight:800;color:var(--white);
+  letter-spacing:.01em;
+}
+.callband .tel svg{vertical-align:-3px;margin-right:8px}
+.callband .hours{font-size:14px;color:#9FB6C9}
+
+/* ---------- admission ---------- */
+.steps{counter-reset:step}
+.step{
+  position:relative;padding:0 0 40px 58px;
+}
+.step::before{
+  counter-increment:step;content:counter(step);
+  position:absolute;left:0;top:2px;
+  width:40px;height:40px;border-radius:50%;
+  background:var(--card);border:2px solid var(--blue);
+  color:var(--blue);font-weight:800;font-size:17px;
+  display:flex;align-items:center;justify-content:center;
+}
+.step::after{
+  content:"";position:absolute;left:19px;top:46px;bottom:6px;
+  width:2px;background:var(--line);
+}
+.step:last-child{padding-bottom:0}
+.step:last-child::after{display:none}
+.step h4{
+  font-family:var(--serif);font-weight:700;font-size:18px;
+  color:var(--navy);margin-bottom:8px;
+}
+.step p{font-size:16px}
+.rule-note{
+  margin-top:36px;font-size:14px;color:#7A8CA0;text-align:center;
+}
+
+/* ---------- contact ---------- */
+.contact{background:var(--navy);color:#C4D4E2;text-align:center}
+.contact .ask{font-family:var(--serif);font-size:19px;color:var(--white);font-weight:600;line-height:1.7}
+.contact .tel{
+  display:inline-block;margin:26px 0 10px;
+  font-size:clamp(34px,9.5vw,46px);font-weight:900;color:var(--white);
+  letter-spacing:.01em;
+}
+.contact .tel .hl{color:#8FC6EC}
+.contact .hours{font-size:15px;color:#9FB6C9}
+.contact .note{font-size:13.5px;color:#7E97AB;margin-top:6px}
+.addr{
+  margin-top:44px;padding-top:36px;border-top:1px solid rgba(255,255,255,.14);
+  font-size:15px;line-height:1.8;
+}
+.addr strong{color:var(--white);font-weight:700;display:block;margin-bottom:4px}
+.mapbox{
+  margin:22px auto 0;max-width:520px;height:180px;border-radius:12px;
+  background:rgba(255,255,255,.07);border:1px dashed rgba(255,255,255,.25);
+  display:flex;align-items:center;justify-content:center;
+  font-size:13.5px;color:#8AA2B6;
+}
+
+/* ---------- footer ---------- */
+footer{background:#243342;padding:30px 0;text-align:center}
+footer p{font-size:12.5px;color:#7E97AB;line-height:1.9}
+footer .flogo{font-family:var(--serif);font-weight:900;color:#B9C9D6;font-size:15px;margin-bottom:8px}
+footer .flogo .bang{color:var(--blue)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.on{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hd">
+    <a class="logo" href="#top">느낌표수학<span class="bang">!</span></a>
+    <div class="hd-right">
+      <a class="hd-tel" href="tel:0319121538"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>031-912-1538</a>
+      <button class="menu-btn" aria-label="메뉴" onclick="document.querySelector('nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav>
+    <a href="#philosophy" onclick="closeNav()">학습 철학</a>
+    <a href="#program" onclick="closeNav()">학습 프로그램</a>
+    <a href="#admission" onclick="closeNav()">입학 안내</a>
+    <a href="#contact" onclick="closeNav()">오시는 길</a>
+    <a href="#" onclick="closeNav()">공지사항</a>
+  </nav>
+</header>
+
+<!-- ① 히어로 -->
+<div class="hero" id="top">
+  <span class="bang-mark">!</span>
+  <div class="wrap">
+    <h1>풀이를 설계하는<br>아이로 키웁니다</h1>
+    <p class="sub">답을 외우는 수학이 아니라, 스스로 생각을 설계하는 수학.<br>느낌표수학은 처음 보는 문제 앞에서<br><strong>스스로 길을 찾는 힘</strong>을 가르칩니다.</p>
+    <p class="meta">주엽동 수학전문 느낌표수학학원<i>·</i>초·중등 대상<i>·</i>초등~고등 전 과정<i>·</i>무학년제</p>
+    <div class="scroll-cue">↓</div>
+  </div>
+</div>
+
+<!-- ② 학습 철학 -->
+<section id="philosophy">
+  <div class="wrap">
+    <span class="eyebrow reveal">학습 철학</span>
+    <h2 class="sec-title reveal">고등수학에서 무너지는 학생,<br>무엇이 달랐을까요</h2>
+
+    <div class="block reveal">
+      <h3><span class="no">첫 번째 이야기</span>중학교 성적이 만드는 착시</h3>
+      <p>수능에서 1등급은 4%입니다. 100명 중 4명입니다. 그런데 중학교에서는 대부분의 학생이 상위권처럼 보입니다. 학생이 특별해서가 아니라, 중학교 시험이 그렇게 만들어져 있기 때문입니다.</p>
+      <p>중학교 시험은 범위가 좁고, 대부분 틀에 박힌 정형문제로 나옵니다. 문제의 생김새만 보고 풀이 순서를 기억해도 점수가 나옵니다. 개념을 깊이 이해하지 못해도 성적표에는 드러나지 않습니다. 그래서 많은 가정이 고등학교를 낙관하고, 이 착시는 보통 <em>고등학교 첫 시험</em>에서 깨집니다.</p>
+    </div>
+
+    <div class="block reveal">
+      <h3><span class="no">두 번째 이야기</span>정형문제와 비정형문제는 다른 문제입니다</h3>
+      <p>수학 문제는 두 종류입니다. 배운 유형이 그대로 나오는 정형문제, 그리고 처음 보는 상황에서 스스로 실마리를 찾아야 하는 비정형·심화문제입니다. 중학교 시험은 거의 전부가 앞의 것이고, 고등학교 시험은 변별을 위해 반드시 뒤의 것을 넣습니다.</p>
+      <p>정형문제는 성실하게 공부하면 됩니다. 문제는 비정형입니다. 등급을 가르는 것은 결국 이 몇 문제인데, 이 문제들에는 <em>지금까지 해 온 공부 방식이 통하지 않습니다.</em></p>
+    </div>
+
+    <div class="block reveal">
+      <h3><span class="no">세 번째 이야기</span>더 풀어도, 해설을 봐도 안 되는 이유</h3>
+      <p>심화문제가 안 풀리면 보통 두 가지를 합니다. 유형 문제를 더 많이 풀리거나, 해설 강의를 듣게 하거나. 그런데 오래 지켜본 결론을 말씀드리면, 둘 다 심화문제는 해결해 주지 못합니다.</p>
+      <p>심화문제는 제한된 시험 시간 안에 문제의 조건에서 숨은 성질을 찾아내고, 해결의 원리를 스스로 발견해야 하는 문제입니다. 그런데 해설은 이미 발견된 결과를 설명해 줄 뿐, <em>발견하는 과정은 가르쳐 주지 못합니다.</em> 해설을 이해한 학생이 얻는 것은 정형화된 풀이 하나입니다. 그리고 그 문제는 시험에 다시 나오지 않습니다.</p>
+    </div>
+
+    <div class="block reveal">
+      <h3><span class="no">네 번째 이야기</span>기질이 아니라, 훈련되지 않은 능력입니다</h3>
+      <p>심화문제를 잘 푸는 학생을 보면 흔히 수학머리를 타고났다고 말합니다. 저희 생각은 다릅니다.</p>
+      <p>그렇게 보이는 데는 이유가 있습니다. 이 능력의 정체는 추론입니다. 관찰하고, 나열해 보고, 따져 보면서 원리를 발견하는 힘인데, 이것은 말로 설명하기 어려운 종류의 지식이라 강의를 듣는 것만으로는 늘지 않습니다. 가르쳐서 되지 않으니 타고나는 것처럼 보이는 겁니다.</p>
+      <p>하지만 설명으로 전달이 안 되는 것과 기를 수 없는 것은 다릅니다. 개념을 철저히 익히고 유형을 개념과 연결해서 이해한 위에서, 발견하는 연습을 꾸준히 반복하면 이 능력은 길러집니다.</p>
+      <p>다행인 것은, 심화문제의 추론에는 패턴이 있다는 점입니다. 개념은 학년이 올라가면서 바뀌지만, 문제를 풀어내는 추론의 방식은 이어집니다. 그래서 중등 과정에서 심화문제를 스스로 해결해 본 학생은, 고등 과정에서 새로 배운 개념으로도 심화문제를 해결해 냅니다.</p>
+      <p>다만 시간이 걸립니다. <em>고등학교에 올라가서 심화문제를 처음 만난 다음에 시작하면 늦습니다.</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- ★ 목표 선언 밴드 -->
+<div class="goal">
+  <span class="bang-mark">!</span>
+  <div class="wrap">
+    <p class="lead reveal">그래서 느낌표수학의 목표는 분명합니다.</p>
+    <h2 class="reveal">중학교를 졸업하기 전에,<br>고등 수학 전 과정을<br><span class="hl">상위권 수준으로 완성</span>하고<br>진학합니다.</h2>
+    <div class="rule reveal"></div>
+    <p class="after reveal">고등학교에 가서 처음 배우면서 시험까지 준비하기에는 3년이 짧습니다. 미리 완성해 두면, 고등학교 3년을 실전을 준비하는 데 쓸 수 있습니다.</p>
+  </div>
+</div>
+
+<!-- ③ 학습 프로그램 -->
+<section class="program" id="program">
+  <div class="wrap">
+    <span class="eyebrow reveal">학습 프로그램</span>
+    <h2 class="sec-title reveal">하나의 수업, 세 개의 파트</h2>
+
+    <p class="part-intro reveal">느낌표수학의 수업은 세 파트로 구성됩니다. 앞의 두 파트가 추론의 도구를 만들고, 마지막 파트에서 그 도구로 발견하는 연습을 합니다.</p>
+
+    <div class="part-card reveal">
+      <h4><span class="pn">1</span>개념학습</h4>
+      <p>개념을 다섯 갈래(약속·숙달·발견·변환·통합)로 나누어 각 성격에 맞는 방법으로 배웁니다. 배운 개념은 다섯 갈래 그대로 개념확인테스트로 점검합니다.</p>
+    </div>
+    <div class="part-card reveal">
+      <h4><span class="pn">2</span>유형학습</h4>
+      <p>유형을 외우는 것이 아니라, 문제와 개념이 어떻게 연결되는지를 배웁니다. 같은 개념이 다른 모습으로 나와도 알아볼 수 있게 하는 훈련입니다. 틀린 문제는 자체 오답프로그램으로 해결될 때까지 다시 확인합니다.</p>
+    </div>
+    <div class="part-card reveal">
+      <h4><span class="pn">3</span>심화학습<span class="tag">풀이설계력 훈련</span></h4>
+      <p>처음 보는 문제 앞에서 조건을 살피고, 전략을 고르고, 풀이를 만들어 가는 힘. 저희는 이것을 '풀이설계력'이라 부르고, 별도의 훈련 과정으로 가르칩니다. 발견하는 과정은 해설로 전달되지 않기 때문에, 학생이 스스로 발견할 때까지 옆에서 이끌어 주는 수업을 합니다.</p>
+    </div>
+
+    <div class="sub-block reveal">
+      <h3>학년이 아니라, 학생에 맞춥니다 — 무학년제</h3>
+      <p>졸업 전에 고등 과정을 완성하려면 학년표를 따라가서는 어렵습니다. 그래서 느낌표수학의 과정은 초등부터 고등까지 하나로 이어져 있고, 학년으로 나누지 않습니다.</p>
+      <p>같은 중2라도 어떤 학생은 중등 개념을 다시 다져야 하고, 어떤 학생은 고등 과정을 시작할 준비가 되어 있습니다. 진단을 통해 학생이 지금 서 있는 자리를 확인하고, 거기서 시작해 자기 속도로 올라갑니다.</p>
+    </div>
+
+    <div class="sub-block reveal">
+      <h3>과정 로드맵 — 초등에서 고등까지</h3>
+      <div class="road">
+        <div class="stage">
+          <h4>초등 과정 <small>초5~6 권장</small></h4>
+          <p>생각의 습관을 만드는 단계입니다. 문제를 읽고 계획을 세우는 '풀이설계력 9전략'을 활동지로 하나씩 익히면서, 낯선 문제를 겁내지 않는 태도를 만듭니다.</p>
+        </div>
+        <div class="stage">
+          <h4>중등 과정</h4>
+          <p>내신을 관리하면서 고등 과정에 올라설 토대를 만드는 단계입니다. 중학교 내신은 개념·유형 학습으로 충분히 대비가 됩니다. 다만 저희는 거기서 멈추지 않고 모든 과정에 심화학습을 넣습니다. 중등 과정에서 익힌 추론의 패턴이 고등 과정에서 그대로 쓰이기 때문입니다. 반대로 유형 암기만으로 성적을 내는 습관이 한번 자리 잡으면, 고등학교에 가서 고치기가 어렵습니다.</p>
+        </div>
+        <div class="stage final">
+          <h4>고등 과정 <small>마지막 단계</small></h4>
+          <p>중학생이 재학 중에 고등 수학 전 과정을 배우고, 비정형·심화 문제까지 상위권 수준으로 완성하는 것을 목표로 합니다.</p>
+        </div>
+      </div>
+      <p class="growth-note">학생이 지금 어느 단계에 있고 무엇이 늘었는지, 단계별로 성장을 확인해 알려드립니다.</p>
+    </div>
+
+    <div class="sub-block reveal">
+      <h3>내신은 4주 집중관리로 잡습니다</h3>
+      <p>평소에는 학생의 과정을 따라 실력을 쌓고, 시험 4주 전부터는 수업 전체가 내신 대비로 바뀝니다.</p>
+      <p>이 기간에는 학생이 다니는 학교에 맞춰 준비합니다. 그 학교의 기출문제를 분석해 출제 경향을 익히고, 시험 범위와 학교 수업 내용, 교과서를 집중적으로 봅니다. 같은 단원이라도 학교마다 묻는 방식이 다르기 때문입니다.</p>
+      <div class="schools">
+        <span>한수중</span><span>오마중</span><span>발산중</span><span>대화중</span><span>장성중</span><span>신일중</span>
+      </div>
+    </div>
+
+    <div class="callband reveal">
+      <p>여기까지 읽으셨다면, 자녀가 지금 어디쯤인지 궁금하실 겁니다.<br>학생의 상황을 들려주시면, 지금 필요한 것이 무엇인지 말씀드리겠습니다.</p>
+      <a class="tel" href="tel:0319121538"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>031-912-1538</a>
+      <p class="hours">상담 가능 시간 · 평일 13:00~22:00</p>
+    </div>
+  </div>
+</section>
+
+<!-- ④ 입학 안내 -->
+<section id="admission">
+  <div class="wrap">
+    <span class="eyebrow reveal">입학 안내</span>
+    <h2 class="sec-title reveal">시작은 전화 한 통이면 됩니다</h2>
+    <div class="steps">
+      <div class="step reveal">
+        <h4>전화 상담</h4>
+        <p>학생의 학년, 현재 공부 상황, 걱정되는 부분을 편하게 들려주세요. 이 통화에서 등록을 권하지 않습니다. 먼저 학생에게 맞는지부터 함께 봅니다.</p>
+      </div>
+      <div class="step reveal">
+        <h4>진단 테스트 <small style="font-family:var(--sans);font-size:13px;color:#7A8CA0;font-weight:600">약 40분</small></h4>
+        <p>점수를 매기는 시험이 아니라, 학생이 어느 과정에서 시작해야 하는지 찾는 과정입니다. 문제를 어떻게 읽고 어떤 방식으로 접근하는지, 생각의 습관까지 함께 봅니다.</p>
+      </div>
+      <div class="step reveal">
+        <h4>결과 상담 및 과정 안내</h4>
+        <p>테스트에서 본 학생의 현재 상태를 그대로 말씀드리고, 시작할 과정과 시점을 안내드립니다. 저희 학원이 맞지 않다고 판단되면 그것도 솔직히 말씀드립니다.</p>
+      </div>
+    </div>
+    <p class="rule-note">수강 관련 세부 규정은 등록 시 안내문으로 함께 드립니다.</p>
+  </div>
+</section>
+
+<!-- ⑤ 오시는 길 & 상담 -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="ask reveal">궁금한 점이 남으셨다면,<br>그것부터 편하게 물어봐 주세요.</p>
+    <a class="tel reveal" href="tel:0319121538">031<span class="hl">·</span>912<span class="hl">·</span>1538</a>
+    <p class="hours reveal">상담 가능 시간 · 평일 13:00~22:00</p>
+    <p class="note reveal">수업 중에는 전화 연결이 어려울 수 있습니다.</p>
+    <div class="addr reveal">
+      <strong>느낌표수학학원</strong>
+      경기 고양시 일산서구 주엽로 134 시대프라자 9층
+      <div class="mapbox">네이버 지도 임베드 영역</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="flogo">느낌표수학<span class="bang">!</span></p>
+    <p>느낌표수학학원 · 경기 고양시 일산서구 주엽로 134 시대프라자 9층 · 031-912-1538<br>
+    사업자등록번호 000-00-00000 · 학원설립운영등록번호 제0000호</p>
+  </div>
+</footer>
+
+<script>
+function closeNav(){document.querySelector('nav').classList.remove('open')}
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
