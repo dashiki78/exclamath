@@ -20,8 +20,10 @@
 ## 기술 규칙
 - Next.js App Router, **전 페이지 SSG** (CSR 전용 SPA 금지 — 네이버 크롤러 대응)
 - 스타일은 `app/globals.css` 단일 파일 (시안 CSS 통이식) — CSS Modules/Tailwind 안 씀
-- 클라이언트 컴포넌트는 Header, Reveal 2개만 — 나머지는 서버 컴포넌트 유지
+- 클라이언트 컴포넌트는 Header·RevealInit·FontLoader 3개만 — 나머지는 서버 컴포넌트 유지
 - `<h1>`은 페이지당 1개, 본문은 실제 텍스트로 (이미지 속 글자 금지)
+- Pretendard는 `public/fonts/`로 서빙 (prebuild가 node_modules에서 복사, git 미추적) — FontLoader가 비블로킹 적용
+- 금지어 검사: `npm run check:banned`
 
 ## 확정 값
 - 도메인 https://exclamath.com / 전화 031-912-1538 (평일 13:00~22:00)
