@@ -47,7 +47,7 @@ export default function Program() {
           <p>평소에는 학생의 과정을 따라 실력을 쌓고, 시험 4주 전부터는 수업 전체가 내신 대비로 바뀝니다.</p>
           <p>이 기간에는 학생이 다니는 학교에 맞춰 준비합니다. 그 학교의 기출문제를 분석해 출제 경향을 익히고, 시험 범위와 학교 수업 내용, 교과서를 집중적으로 봅니다. 같은 단원이라도 학교마다 묻는 방식이 다르기 때문입니다.</p>
           <div className="schools">
-            <span>한수중</span><span>발산중</span>
+            <span>한수중</span> <span>발산중</span> <span>오마중</span> <span>대화중</span> <span>장성중</span> <span>신일중</span>
           </div>
         </div>
 
