@@ -24,6 +24,7 @@ export default function Program() {
 
         <div className="sub-block reveal">
           <h3>과정 로드맵 — 초등에서 고등까지</h3>
+          <p>한 과정은 3개월입니다.</p>
           <div className="road">
             <div className="stage">
               <h4>초등 과정 <small>초5~6 권장</small></h4>
@@ -34,8 +35,8 @@ export default function Program() {
               <p>내신을 관리하면서 고등 과정에 올라설 토대를 만드는 단계입니다. 중학교 내신은 개념·유형 학습으로 충분히 대비가 됩니다. 다만 저희는 거기서 멈추지 않고 모든 과정에 심화학습을 넣습니다. 중등 과정에서 익힌 추론의 패턴이 고등 과정에서 그대로 쓰이기 때문입니다. 반대로 유형 암기만으로 성적을 내는 습관이 한번 자리 잡으면, 고등학교에 가서 고치기가 어렵습니다.</p>
             </div>
             <div className="stage final">
-              <h4>고등 과정 <small>마지막 단계</small></h4>
-              <p>중학생이 재학 중에 고등 수학 전 과정을 배우고, 비정형·심화 문제까지 상위권 수준으로 완성하는 것을 목표로 합니다.</p>
+              <h4>심화 단계</h4>
+              <p>앞 단계를 마친 반이 올라가는 과정입니다. 개념과 유형이 안정되고 심화 문제를 스스로 해결하기 시작하면 다음 과정으로 진행합니다. 배치는 학년이 아니라 입학 테스트와 현재 상태로 정합니다.</p>
             </div>
           </div>
           <p className="growth-note">학생이 지금 어느 단계에 있고 무엇이 늘었는지, 단계별로 성장을 확인해 알려드립니다.</p>
@@ -46,7 +47,7 @@ export default function Program() {
           <p>평소에는 학생의 과정을 따라 실력을 쌓고, 시험 4주 전부터는 수업 전체가 내신 대비로 바뀝니다.</p>
           <p>이 기간에는 학생이 다니는 학교에 맞춰 준비합니다. 그 학교의 기출문제를 분석해 출제 경향을 익히고, 시험 범위와 학교 수업 내용, 교과서를 집중적으로 봅니다. 같은 단원이라도 학교마다 묻는 방식이 다르기 때문입니다.</p>
           <div className="schools">
-            <span>한수중</span><span>오마중</span><span>발산중</span><span>대화중</span><span>장성중</span><span>신일중</span>
+            <span>한수중</span><span>발산중</span>
           </div>
         </div>
 

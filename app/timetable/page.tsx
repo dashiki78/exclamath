@@ -39,6 +39,38 @@ export default function TimetablePage() {
             </tbody>
           </table>
           <p className="timetable-note">{timetable.note}</p>
+
+          <div className="tuition" id="tuition">
+            <h2 className="sec-title">교습비 안내</h2>
+            <table className="timetable">
+              <thead>
+                <tr>
+                  <th scope="col">과정</th>
+                  <th scope="col">수업</th>
+                  <th scope="col">교습비</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">초등 과정</th>
+                  <td>주 3회 · 회당 2시간</td>
+                  <td>월 300,000원</td>
+                </tr>
+                <tr>
+                  <th scope="row">중등 과정</th>
+                  <td>주 3회 · 회당 2시간</td>
+                  <td>월 320,000원</td>
+                </tr>
+                <tr>
+                  <th scope="row">고등 과정</th>
+                  <td>주 3회 · 회당 3시간</td>
+                  <td>월 500,000원</td>
+                </tr>
+              </tbody>
+            </table>
+            <p className="timetable-note">※ 교습비 외 기타경비 없음</p>
+          </div>
+
           <p className="timetable-tel">
             <a href="tel:0319121538">
               <TelIcon size={15} /> 031-912-1538

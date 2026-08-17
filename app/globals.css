@@ -277,6 +277,11 @@ section{padding:76px 0}
 }
 .addr strong{color:var(--white);font-weight:700;display:block;margin-bottom:4px}
 .map-note{font-size:13.5px;color:#918D80;margin-top:12px}
+.contact .tuition-link{margin-top:26px;font-size:14.5px}
+.contact .tuition-link a{
+  color:var(--blue);font-weight:700;
+  text-decoration:underline;text-underline-offset:4px;
+}
 
 /* ---------- footer ---------- */
 footer{background:#111111;padding:30px 0;text-align:center}
@@ -315,6 +320,8 @@ footer .flogo .bang{color:var(--blue)}
   background:var(--blue);border-radius:20px;padding:8px 18px;
 }
 .timetable-tel svg{vertical-align:-2px;margin-right:5px}
+.tuition{margin-top:64px}
+.tuition .sec-title{margin-bottom:8px}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}

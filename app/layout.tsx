@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://exclamath.com"),
   title: "느낌표수학학원 | 주엽동 초·중등 수학전문 · 일산서구",
   description:
-    "주엽동 수학학원 느낌표수학. 중학교 졸업 전 고등 수학 전 과정을 상위권 수준으로 완성하고 진학합니다. 풀이설계력 훈련 · 내신 4주 집중관리 (한수중·오마중·발산중·대화중·장성중·신일중) ☎ 031-912-1538",
+    "주엽동 수학학원 느낌표수학. 처음 보는 문제 앞에서 스스로 길을 찾는 힘, 풀이설계력을 훈련합니다. 개념·유형·심화 3파트 수업 · 내신 4주 집중관리(한수중·발산중) ☎ 031-912-1538",
   alternates: { canonical: "/" },
   verification: {
     google: "VkxIBJQr0wt39KxpBclc1uHg4BVxtlqO41iWoT27a6M",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "느낌표수학학원 | 주엽동 초·중등 수학전문 · 일산서구",
     description:
-      "주엽동 수학학원 느낌표수학. 중학교 졸업 전 고등 수학 전 과정을 상위권 수준으로 완성하고 진학합니다. 풀이설계력 훈련 · 내신 4주 집중관리",
+      "주엽동 수학학원 느낌표수학. 처음 보는 문제 앞에서 스스로 길을 찾는 힘, 풀이설계력을 훈련합니다. 개념·유형·심화 3파트 수업 · 내신 4주 집중관리(한수중·발산중) ☎ 031-912-1538",
     type: "website",
     locale: "ko_KR",
     url: "https://exclamath.com",

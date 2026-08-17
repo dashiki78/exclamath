@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Contact() {
   return (
     <section className="contact" id="contact">
@@ -13,6 +15,9 @@ export default function Contact() {
           경기 고양시 일산서구 주엽로 134 시대프라자 9층
           <p className="map-note">주엽역 인근 · 건물 주차 가능</p>
         </div>
+        <p className="tuition-link reveal">
+          <Link href="/timetable#tuition">수업 시간표 · 교습비 안내 →</Link>
+        </p>
       </div>
     </section>
   );
