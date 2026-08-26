@@ -8,7 +8,7 @@ export default function Contact() {
         <a className="tel reveal" href="tel:0319121538">
           031<span className="hl">·</span>912<span className="hl">·</span>1538
         </a>
-        <p className="hours reveal">상담 가능 시간 · 평일 13:00~22:00</p>
+        <p className="hours reveal">상담 가능 시간 · 평일 15:00~22:00</p>
         <p className="note reveal">수업 중에는 전화 연결이 어려울 수 있습니다.</p>
         <div className="addr reveal">
           <strong>느낌표수학학원</strong>

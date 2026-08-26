@@ -11,7 +11,7 @@ export default function CallBand() {
         <TelIcon size={22} />
         031-912-1538
       </a>
-      <p className="hours">상담 가능 시간 · 평일 13:00~22:00</p>
+      <p className="hours">상담 가능 시간 · 평일 15:00~22:00</p>
     </div>
   );
 }

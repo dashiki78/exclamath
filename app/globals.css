@@ -313,6 +313,62 @@ footer .flogo .bang{color:var(--blue)}
   padding:13px 10px;text-align:center;color:var(--body);
   border-bottom:1px solid var(--line);font-weight:600;
 }
+.seats-asof{margin:-28px 0 8px;font-size:13.5px;color:#6F6B5C}
+.tt-group{
+  font-family:var(--serif);font-weight:700;font-size:18px;
+  color:var(--navy);margin:40px 0 6px;letter-spacing:-0.02em;
+}
+.cls-note{font-family:var(--sans);font-size:12.5px;font-weight:700;color:var(--gold)}
+/* 토요일 안내 — 학부모가 놓치면 안 되는 한 줄, 크게 */
+.sat-notice{
+  margin:10px 0 12px;padding:14px 18px;
+  background:var(--card);border:2px solid var(--blue);border-radius:8px;
+  font-size:16.5px;font-weight:700;color:var(--navy);line-height:1.6;
+}
+.sat-notice strong{font-weight:800;background:linear-gradient(transparent 62%,rgba(255,212,0,.55) 62%)}
+/* 토요일 열 강조 — 평일과 시간대가 완전히 다름 */
+.timetable thead th.sat-col{background:var(--blue);color:var(--navy)}
+.timetable tbody td.sat-col{
+  background:var(--card);color:var(--navy);font-weight:800;
+  border-left:2px solid var(--blue);border-right:2px solid var(--blue);
+}
+/* 상태 배지 — 네 종류. 진행중·정원마감을 회색으로 죽이지 않는다(학원이 돌아간다는 신호) */
+.st{
+  display:inline-block;border-radius:20px;padding:3px 10px;
+  font-size:12.5px;font-weight:800;letter-spacing:0;white-space:nowrap;
+}
+.st-run{background:var(--blue);color:var(--navy)}           /* 진행 중 · N석 (잔여석 필수) */
+.st-new{background:var(--navy);color:var(--blue)}           /* 10월 1일 개강 · N석 */
+.st-full{background:var(--gold);color:var(--white)}         /* 정원 마감 · 대기 접수 */
+.st-anytime{background:var(--mist);color:var(--navy);border:1px solid var(--line)}  /* 상시 접수 */
+/* 배지 아래 다음 과정 안내 — "11월 1일에 공통수학2를 시작합니다" */
+.st-note{
+  display:block;margin-top:6px;font-size:12.5px;line-height:1.5;
+  color:var(--navy);font-weight:600;
+}
+/* 표 전체 아래 진단 안내 한 줄 */
+.diag-note{
+  margin-top:24px;padding:14px 18px;text-align:center;
+  background:var(--mist);border-radius:8px;
+  font-size:15px;font-weight:600;color:var(--navy);line-height:1.7;
+}
+/* 표 아래 안내 블록 */
+.tt-info{margin-top:44px}
+.tt-info h2{
+  font-family:var(--serif);font-weight:700;font-size:18px;
+  color:var(--navy);margin-bottom:12px;letter-spacing:-0.02em;
+}
+.tt-info p{font-size:16px}
+.tt-info ul{list-style:none}
+.tt-info li{
+  position:relative;padding-left:18px;margin-bottom:10px;font-size:16px;
+}
+.tt-info li::before{
+  content:"";position:absolute;left:0;top:12px;
+  width:7px;height:7px;border-radius:50%;background:var(--blue);
+  border:1px solid var(--gold);
+}
+.tt-info li strong{color:var(--navy);font-weight:800}
 .timetable-note{margin-top:20px;font-size:14px;color:#6F6B5C;text-align:center}
 .timetable-tel{margin-top:14px;text-align:center}
 .timetable-tel a{
@@ -322,6 +378,68 @@ footer .flogo .bang{color:var(--blue)}
 .timetable-tel svg{vertical-align:-2px;margin-right:5px}
 .tuition{margin-top:64px}
 .tuition .sec-title{margin-bottom:8px}
+
+/* ---------- opening block (홈 모집 안내) ---------- */
+.opening{background:var(--white);border-bottom:1px solid var(--line);padding:64px 0}
+.opening .sec-title{margin-bottom:26px}
+.opening .opening-second{margin-top:56px}
+/* 지금 들어가실 수 있는 자리 — 확실한 자리(합류 예정)가 맨 위 */
+.seat-list{list-style:none}
+.seat-list li{
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  padding:14px 16px;border:1px solid var(--line);border-radius:10px;
+  margin-bottom:10px;font-size:15.5px;background:var(--mist);
+}
+.seat-list li.seat-join{
+  background:var(--card);border:2px solid var(--blue);
+  display:block;
+}
+/* 정원 마감 — 회색으로 죽이지 않는다. 학원이 돌아가고 있다는 신호 */
+.seat-list li.seat-full{
+  background:var(--white);border:2px solid var(--gold);
+  display:block;
+}
+.seat-list .seat-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.seat-list .seat-pitch{
+  display:block;margin-top:8px;font-size:14px;line-height:1.65;color:var(--body);
+}
+.seat-count-full{background:var(--gold)!important;color:var(--white)!important}
+.seat-list strong{color:var(--navy);font-weight:800}
+.seat-list .seat-time{color:var(--body);font-weight:600;font-size:14.5px}
+.seat-list .seat-count{
+  margin-left:auto;background:var(--navy);color:var(--blue);
+  border-radius:20px;padding:2px 11px;font-size:13px;font-weight:800;white-space:nowrap;
+}
+.opening-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:560px){.opening-cards{grid-template-columns:1fr}}
+.opening-card{
+  background:var(--mist);border:1px solid var(--line);border-radius:10px;
+  padding:18px 18px 16px;
+}
+.opening-card h3{
+  font-family:var(--serif);font-weight:700;font-size:17.5px;
+  color:var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:8px;
+}
+.opening-card h3 .seats{
+  font-family:var(--sans);font-size:12px;font-weight:800;
+  background:var(--blue);color:var(--navy);border-radius:20px;padding:2px 9px;
+}
+.opening-card dl{font-size:14px;line-height:1.7}
+.opening-card dl div{display:flex;gap:10px}
+.opening-card dt{color:#6F6B5C;font-weight:600;flex:0 0 52px}
+.opening-card dd{color:var(--navy);font-weight:700}
+.opening-confirm{margin-top:20px;font-size:14.5px;color:var(--body)}
+.opening-link{margin-top:10px;font-size:15px}
+.opening-link a{
+  color:var(--navy);font-weight:800;
+  text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--gold);
+}
+
+/* hero entry line */
+.hero .entry{
+  margin-top:24px;font-size:14.5px;font-weight:700;color:var(--navy);position:relative;
+}
+.hero .entry i{font-style:normal;color:var(--gold);margin:0 8px}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}

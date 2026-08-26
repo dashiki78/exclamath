@@ -9,9 +9,10 @@ export default function Hero() {
           느낌표수학은 처음 보는 문제 앞에서<br />
           <strong>스스로 길을 찾는 힘</strong>을 가르칩니다.
         </p>
-        <p className="meta">
-          주엽동 수학전문 느낌표수학학원<i>·</i>초5과정부터 고3과정까지<i>·</i>무학년 과정별 편성
+        <p className="entry">
+          초4부터 고등 과정까지<i>·</i>학년이 아니라 진도로 편성<i>·</i>정원 여섯 명
         </p>
+        <p className="meta">주엽동 수학전문 느낌표수학학원</p>
         <div className="scroll-cue" aria-hidden="true">↓</div>
       </div>
     </div>

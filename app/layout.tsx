@@ -14,18 +14,18 @@ const serif = Noto_Serif_KR({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://exclamath.com"),
-  title: "느낌표수학학원 | 주엽동 초·중등 수학전문 · 일산서구",
+  title: "느낌표수학학원 | 주엽동 초·중·고 수학전문 · 일산서구",
   description:
-    "주엽동 수학학원 느낌표수학. 처음 보는 문제 앞에서 스스로 길을 찾는 힘, 풀이설계력을 훈련합니다. 개념·유형·심화 3파트 수업 · 내신 4주 집중관리(한수중·발산중·오마중·대화중·장성중·신일중) ☎ 031-912-1538",
+    "주엽동 수학학원 느낌표수학. 초4부터 고등 과정까지, 학년이 아니라 진도로 반을 편성합니다. 반 정원 여섯 명. 진단 테스트로 시작 지점을 정하고, 맞지 않으면 받지 않습니다. ☎ 031-912-1538",
   alternates: { canonical: "/" },
   verification: {
     google: "VkxIBJQr0wt39KxpBclc1uHg4BVxtlqO41iWoT27a6M",
     other: { "naver-site-verification": "0fc551efbacdfa5083f9fd25f17ebb444b5a533d" },
   },
   openGraph: {
-    title: "느낌표수학학원 | 주엽동 초·중등 수학전문 · 일산서구",
+    title: "느낌표수학학원 | 주엽동 초·중·고 수학전문 · 일산서구",
     description:
-      "주엽동 수학학원 느낌표수학. 처음 보는 문제 앞에서 스스로 길을 찾는 힘, 풀이설계력을 훈련합니다. 개념·유형·심화 3파트 수업 · 내신 4주 집중관리(한수중·발산중·오마중·대화중·장성중·신일중) ☎ 031-912-1538",
+      "주엽동 수학학원 느낌표수학. 초4부터 고등 과정까지, 학년이 아니라 진도로 반을 편성합니다. 반 정원 여섯 명. 진단 테스트로 시작 지점을 정하고, 맞지 않으면 받지 않습니다. ☎ 031-912-1538",
     type: "website",
     locale: "ko_KR",
     url: "https://exclamath.com",
