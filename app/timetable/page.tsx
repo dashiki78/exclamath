@@ -3,12 +3,11 @@ import TelIcon from "@/components/TelIcon";
 import { classes, seatsAsOf, statusLabel, statusClass } from "@/data/timetable";
 
 // 시간표·잔여석 데이터는 전부 data/timetable.ts 에 있습니다. 이 파일에는 숫자가 없습니다.
-// TODO(2026-09-17): 개설 확정 — 미달 반은 data/timetable.ts에서 내리고 "1월 개강"으로 변경
 
 export const metadata: Metadata = {
   title: "수업 시간표·교습비 | 느낌표수학학원 주엽동",
   description:
-    "2026년 10월 1일 개강 기준 시간표. 11월 1일 공통수학2, 10월 23일 중2-2가 새로 시작합니다. 신설 다섯 개 반 · 정원 여섯 명 · 잔여석 주 1회 갱신. 토요일은 시간대가 다릅니다.",
+    "11월 1일 공통수학2, 10월 23일 중2-2가 새로 시작합니다. 정원 여섯 명 · 잔여석 주 1회 갱신. 토요일은 시간대가 다릅니다.",
   alternates: { canonical: "/timetable" },
 };
 
@@ -21,7 +20,7 @@ export default function TimetablePage() {
       <section className="page-section">
         <div className="wrap">
           <span className="eyebrow">시간표</span>
-          <h1 className="sec-title">2026년 10월 1일 개강 기준 수업 시간표</h1>
+          <h1 className="sec-title">수업 시간표</h1>
           <p className="seats-asof">잔여석 {seatsAsOf} 기준</p>
 
           <h2 className="tt-group">월·수·금</h2>
@@ -116,9 +115,8 @@ export default function TimetablePage() {
               날 그대로 넘어갑니다.
             </p>
             <p>
-              같은 진도 학생이 세 명 모이면 그날 반을 엽니다. 10월 1일보다 빨라지는 경우가
-              실제로 있습니다. 다만 반이 열리면 요일이 바뀔 수 있어서, 그때 먼저 말씀드리고
-              정합니다.
+              같은 진도 학생이 세 명 모이면 그날 반을 엽니다. 다만 반이 열리면 요일이 바뀔 수
+              있어서, 그때 먼저 말씀드리고 정합니다.
             </p>
           </div>
 

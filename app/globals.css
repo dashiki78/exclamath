@@ -332,13 +332,12 @@ footer .flogo .bang{color:var(--blue)}
   background:var(--card);color:var(--navy);font-weight:800;
   border-left:2px solid var(--blue);border-right:2px solid var(--blue);
 }
-/* 상태 배지 — 네 종류. 진행중·정원마감을 회색으로 죽이지 않는다(학원이 돌아간다는 신호) */
+/* 상태 배지 — 세 종류. 진행중·정원마감을 회색으로 죽이지 않는다(학원이 돌아간다는 신호) */
 .st{
   display:inline-block;border-radius:20px;padding:3px 10px;
   font-size:12.5px;font-weight:800;letter-spacing:0;white-space:nowrap;
 }
 .st-run{background:var(--blue);color:var(--navy)}           /* 진행 중 · N석 (잔여석 필수) */
-.st-new{background:var(--navy);color:var(--blue)}           /* 10월 1일 개강 · N석 */
 .st-full{background:var(--gold);color:var(--white)}         /* 정원 마감 · 대기 접수 */
 .st-anytime{background:var(--mist);color:var(--navy);border:1px solid var(--line)}  /* 상시 접수 */
 /* 배지 아래 다음 과정 안내 — "11월 1일에 공통수학2를 시작합니다" */
@@ -382,8 +381,7 @@ footer .flogo .bang{color:var(--blue)}
 /* ---------- opening block (홈 모집 안내) ---------- */
 .opening{background:var(--white);border-bottom:1px solid var(--line);padding:64px 0}
 .opening .sec-title{margin-bottom:26px}
-.opening .opening-second{margin-top:56px}
-/* 지금 들어가실 수 있는 자리 — 확실한 자리(합류 예정)가 맨 위 */
+/* 지금 들어갈 수 있는 자리 — 확실한 자리(합류 예정)가 맨 위 */
 .seat-list{list-style:none}
 .seat-list li{
   display:flex;align-items:center;gap:12px;flex-wrap:wrap;
@@ -410,24 +408,6 @@ footer .flogo .bang{color:var(--blue)}
   margin-left:auto;background:var(--navy);color:var(--blue);
   border-radius:20px;padding:2px 11px;font-size:13px;font-weight:800;white-space:nowrap;
 }
-.opening-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media (max-width:560px){.opening-cards{grid-template-columns:1fr}}
-.opening-card{
-  background:var(--mist);border:1px solid var(--line);border-radius:10px;
-  padding:18px 18px 16px;
-}
-.opening-card h3{
-  font-family:var(--serif);font-weight:700;font-size:17.5px;
-  color:var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:8px;
-}
-.opening-card h3 .seats{
-  font-family:var(--sans);font-size:12px;font-weight:800;
-  background:var(--blue);color:var(--navy);border-radius:20px;padding:2px 9px;
-}
-.opening-card dl{font-size:14px;line-height:1.7}
-.opening-card dl div{display:flex;gap:10px}
-.opening-card dt{color:#6F6B5C;font-weight:600;flex:0 0 52px}
-.opening-card dd{color:var(--navy);font-weight:700}
 .opening-confirm{margin-top:20px;font-size:14.5px;color:var(--body)}
 .opening-link{margin-top:10px;font-size:15px}
 .opening-link a{
