@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import TelIcon from "@/components/TelIcon";
-import { classes, seatsAsOf, statusLabel, statusClass } from "@/data/timetable";
+import { classes, statusLabel, statusClass } from "@/data/timetable";
 
 // 시간표·잔여석 데이터는 전부 data/timetable.ts 에 있습니다. 이 파일에는 숫자가 없습니다.
 
 export const metadata: Metadata = {
   title: "수업 시간표·교습비 | 느낌표수학학원 주엽동",
   description:
-    "수업 시간표·교습비 안내. 정원 여섯 명 · 잔여석 주 1회 갱신. 토요일은 시간대가 다릅니다.",
+    "수업 시간표·교습비 안내. 정원 여섯 명. 토요일은 시간대가 다릅니다.",
   alternates: { canonical: "/timetable" },
 };
 
@@ -21,7 +21,6 @@ export default function TimetablePage() {
         <div className="wrap">
           <span className="eyebrow">시간표</span>
           <h1 className="sec-title">수업 시간표</h1>
-          <p className="seats-asof">잔여석 {seatsAsOf} 기준</p>
 
           <h2 className="tt-group">월·수·금</h2>
           <table className="timetable">

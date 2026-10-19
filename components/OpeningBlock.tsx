@@ -58,7 +58,7 @@ export default function OpeningBlock() {
         </p>
 
         <p className="opening-link reveal">
-          <Link href="/timetable">전체 시간표·잔여석 보기 →</Link>
+          <Link href="/timetable">전체 시간표 보기 →</Link>
         </p>
       </div>
     </section>

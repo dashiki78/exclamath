@@ -313,7 +313,6 @@ footer .flogo .bang{color:var(--blue)}
   padding:13px 10px;text-align:center;color:var(--body);
   border-bottom:1px solid var(--line);font-weight:600;
 }
-.seats-asof{margin:-28px 0 8px;font-size:13.5px;color:#6F6B5C}
 .tt-group{
   font-family:var(--serif);font-weight:700;font-size:18px;
   color:var(--navy);margin:40px 0 6px;letter-spacing:-0.02em;
@@ -337,7 +336,7 @@ footer .flogo .bang{color:var(--blue)}
   display:inline-block;border-radius:20px;padding:3px 10px;
   font-size:12.5px;font-weight:800;letter-spacing:0;white-space:nowrap;
 }
-.st-run{background:var(--blue);color:var(--navy)}           /* 진행 중 · N석 (잔여석 필수) */
+.st-run{background:var(--blue);color:var(--navy)}           /* 진행 중 · 접수 중 (잔여석 숫자 비표시) */
 .st-full{background:var(--gold);color:var(--white)}         /* 정원 마감 · 대기 접수 */
 .st-anytime{background:var(--mist);color:var(--navy);border:1px solid var(--line)}  /* 상시 접수 */
 /* 배지 아래 다음 과정 안내 — "11월 1일에 공통수학2를 시작합니다" */
