@@ -7,7 +7,7 @@ import { classes, seatsAsOf, statusLabel, statusClass } from "@/data/timetable";
 export const metadata: Metadata = {
   title: "수업 시간표·교습비 | 느낌표수학학원 주엽동",
   description:
-    "11월 1일 공통수학2, 10월 23일 중2-2가 새로 시작합니다. 정원 여섯 명 · 잔여석 주 1회 갱신. 토요일은 시간대가 다릅니다.",
+    "10월 23일 중2-2가 새로 시작합니다. 정원 여섯 명 · 잔여석 주 1회 갱신. 토요일은 시간대가 다릅니다.",
   alternates: { canonical: "/timetable" },
 };
 

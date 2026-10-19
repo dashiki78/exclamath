@@ -26,7 +26,6 @@
 //
 // TODO(매주 월요일): 잔여석(seats) 갱신 — 이 파일의 seats 숫자만 수정
 // TODO(2026-10-23): 화목토 중2-1이 중2-2 시작 — name을 "중2-2"로, nextNote·joinPitch 제거
-// TODO(2026-11-01): 월수금 공통수학1이 공통수학2 시작 — name을 "공통수학2"로, nextNote·joinPitch 제거
 // ============================================================================
 
 export type DayGroup = "월수금" | "화목토";
@@ -64,9 +63,7 @@ export const classes: ClassInfo[] = [
   // ── 월·수·금 ──────────────────────────────────────────────────────────
   { name: "개강 준비반", days: "월수금", weekdayTime: "15:00~17:00", status: "상시", seats: 0 },
   { name: "중2-2", days: "월수금", weekdayTime: "17:00~19:00", status: "진행중", seats: 5 },
-  { name: "공통수학1", days: "월수금", weekdayTime: "19:00~22:00", status: "진행중", seats: 4,
-    nextNote: "11월 1일에 공통수학2를 시작합니다",
-    joinPitch: "지금 들어오시면 10월 한 달 동안 남은 단원을 함께 정리하고, 11월 1일에 공통수학2를 처음부터 시작합니다." },
+  { name: "공통수학2", days: "월수금", weekdayTime: "19:00~22:00", status: "진행중", seats: 4 },
 
   // ── 화·목·토 (토요일은 시간이 아예 다르다) ───────────────────────────
   { name: "중3-1", days: "화목토", weekdayTime: "17:00~19:00", saturdayTime: "10:00~12:00", status: "진행중", seats: 2 },
