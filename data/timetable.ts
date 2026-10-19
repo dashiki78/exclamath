@@ -66,7 +66,7 @@ export const classes: ClassInfo[] = [
 
   // ── 화·목·토 (토요일은 시간이 아예 다르다) ───────────────────────────
   { name: "중3-1", days: "화목토", weekdayTime: "17:00~19:00", saturdayTime: "10:00~12:00", status: "진행중", seats: 2 },
-  { name: "중2-1", days: "화목토", weekdayTime: "17:00~19:00", saturdayTime: "10:00~12:00", status: "진행중", seats: 4 },
+  { name: "중2-2", days: "화목토", weekdayTime: "17:00~19:00", saturdayTime: "10:00~12:00", status: "진행중", seats: 4 },
   { name: "공통수학1", days: "화목토", weekdayTime: "19:00~22:00", saturdayTime: "12:00~15:00", status: "정원마감", seats: 0 },
   { name: "개강 준비반", days: "화목토", weekdayTime: "15:00~17:00", saturdayTime: "15:00~17:00", status: "상시", seats: 0 },
 ];
