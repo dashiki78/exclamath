@@ -10,15 +10,16 @@ export default function OpeningBlock() {
       <div className="wrap">
         <span className="eyebrow reveal">모집 안내</span>
 
-        <h2 className="sec-title reveal">수업은 두 가지로 운영합니다</h2>
+        <h2 className="sec-title reveal">수업은 개별맞춤교수에서 시작합니다</h2>
         <ul className="seat-list reveal">
           <li className="seat-join">
             <span className="seat-row">
               <strong>개별맞춤교수</strong>
             </span>
             <span className="seat-pitch">
-              신입생은 이 수업으로 시작합니다. 실제 수업을 하면서 학생의 진도와 개념 이해도,
-              학습 속도, 문제를 해결하는 과정을 파악합니다.
+              상담이나 한 번의 테스트만으로 학생의 학습 상태를 충분히 파악하기는 어렵습니다.
+              그래서 신입생은 이 수업으로 시작합니다. 실제로 가르치면서 학생의 개념 이해도와
+              학습 속도, 문제를 해결하는 방식을 살펴봅니다.
             </span>
           </li>
           <li className="seat-join">
@@ -26,9 +27,9 @@ export default function OpeningBlock() {
               <strong>판서식 반 수업</strong>
             </span>
             <span className="seat-pitch">
-              학습 과정과 수준이 비슷하고 수업 시간이 맞는 학생들이 모이면 반을 구성합니다.
-              반으로 옮기는 것은 의무가 아니며, 학생의 학습 상황에 따라 개별맞춤교수를
-              계속할 수도 있습니다. 두 수업은 우열이 없는 정규 수업입니다.
+              이후 학습 과정과 수준이 비슷하고 수업 시간이 맞는 학생들이 모이면 판서식 반을
+              구성할 수 있습니다. 모든 학생이 반으로 옮기는 것은 아니며, 학생에게 적합하다면
+              개별맞춤교수를 계속합니다. 두 수업은 우열이 없는 정규 수업입니다.
             </span>
           </li>
         </ul>
