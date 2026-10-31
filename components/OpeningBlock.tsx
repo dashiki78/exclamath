@@ -1,17 +1,8 @@
 import Link from "next/link";
-import {
-  featuredClasses,
-  fullClasses,
-  fullPitch,
-  openClasses,
-  startTimeLabel,
-  statusLabel,
-} from "@/data/timetable";
 
-// 자리·잔여석 데이터는 전부 data/timetable.ts 에서 온다. 여기에 숫자를 쓰지 않는다.
-// 정원 마감 → 다음 과정이 잡힌 진행 반 → 그 외 진행 반 순서. 순서 바꾸지 말 것.
-// "9월 17일"은 홈·시간표에 쓰지 않는다 — 예약자에게 전화로 알리는 정보.
-// 신설반 카드 덩어리는 2026-10-19 삭제 (원장 지시).
+// 모집 안내 — 2026-10-31 운영 방식 변경(신입생은 개별맞춤교수로 시작, 조건이 맞으면 판서식 반 구성).
+// 새 시간표가 확정되기 전까지 반·시간·정원·잔여석을 여기에 만들지 않는다.
+// 전화는 방문 상담 일정을 잡는 창구 — 시간·과정 안내는 방문 상담에서 한다고 쓴다.
 
 export default function OpeningBlock() {
   return (
@@ -19,46 +10,36 @@ export default function OpeningBlock() {
       <div className="wrap">
         <span className="eyebrow reveal">모집 안내</span>
 
-        <h2 className="sec-title reveal">지금 들어갈 수 있는 자리</h2>
+        <h2 className="sec-title reveal">수업은 두 가지로 운영합니다</h2>
         <ul className="seat-list reveal">
-          {/* 정원 마감 반도 이 목록 맨 위에 함께 — 별도 섹션으로 분리하지 않는다
-              (만석 반이 하나뿐이라 따로 떼면 빈약해 보임). 회색으로 죽이지 않는다 */}
-          {fullClasses.map((c, i) => (
-            <li key={`x${i}`} className="seat-full">
-              <span className="seat-row">
-                <strong>{c.name}</strong>
-                <span className="seat-time">{startTimeLabel(c)}</span>
-                <span className="seat-count seat-count-full">{statusLabel(c)}</span>
-              </span>
-              <span className="seat-pitch">{fullPitch(c)}</span>
-            </li>
-          ))}
-          {featuredClasses.map((c, i) => (
-            <li key={`f${i}`} className="seat-join">
-              <span className="seat-row">
-                <strong>{c.name}</strong>
-                <span className="seat-time">{startTimeLabel(c)}</span>
-                <span className="seat-count">{statusLabel(c)}</span>
-              </span>
-              <span className="seat-pitch">{c.joinPitch}</span>
-            </li>
-          ))}
-          {openClasses.map((c, i) => (
-            <li key={`o${i}`}>
-              <strong>{c.name}</strong>
-              <span className="seat-time">{startTimeLabel(c)}</span>
-              <span className="seat-count">{statusLabel(c)}</span>
-            </li>
-          ))}
+          <li className="seat-join">
+            <span className="seat-row">
+              <strong>개별맞춤교수</strong>
+            </span>
+            <span className="seat-pitch">
+              신입생은 이 수업으로 시작합니다. 실제 수업을 하면서 학생의 진도와 개념 이해도,
+              학습 속도, 문제를 해결하는 과정을 파악합니다.
+            </span>
+          </li>
+          <li className="seat-join">
+            <span className="seat-row">
+              <strong>판서식 반 수업</strong>
+            </span>
+            <span className="seat-pitch">
+              학습 과정과 수준이 비슷하고 수업 시간이 맞는 학생들이 모이면 반을 구성합니다.
+              반으로 옮기는 것은 의무가 아니며, 학생의 학습 상황에 따라 개별맞춤교수를
+              계속할 수도 있습니다. 두 수업은 우열이 없는 정규 수업입니다.
+            </span>
+          </li>
         </ul>
 
         <p className="opening-confirm reveal">
-          지금 오시면 개강 준비반에서 시작 지점을 맞추고, 반이 열리는 날 그대로
-          넘어갑니다. 같은 진도 학생이 세 명 모이면 그날 반을 엽니다.
+          현재 개별맞춤교수 신입생을 모집하고 있습니다. 수업 가능한 시간과 학생에게 맞는
+          학습 과정은 방문 상담에서 안내해 드립니다.
         </p>
 
         <p className="opening-link reveal">
-          <Link href="/timetable">전체 시간표 보기 →</Link>
+          <Link href="/timetable">수업 안내 · 교습비 보기 →</Link>
         </p>
       </div>
     </section>

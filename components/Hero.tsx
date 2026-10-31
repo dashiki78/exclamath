@@ -10,7 +10,7 @@ export default function Hero() {
           <strong>스스로 길을 찾는 힘</strong>을 가르칩니다.
         </p>
         <p className="entry">
-          초4부터 고등 과정까지<i>·</i>학년이 아니라 진도로 편성<i>·</i>정원 여섯 명
+          초4부터 고등 과정까지<i>·</i>개별맞춤교수로 시작<i>·</i>학년이 아니라 진도로 편성
         </p>
         <p className="meta">주엽동 수학전문 느낌표수학학원</p>
         <div className="scroll-cue" aria-hidden="true">↓</div>

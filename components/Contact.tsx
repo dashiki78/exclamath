@@ -16,7 +16,7 @@ export default function Contact() {
           <p className="map-note">주엽역 인근 · 건물 주차 가능</p>
         </div>
         <p className="tuition-link reveal">
-          <Link href="/timetable#tuition">수업 시간표 · 교습비 안내 →</Link>
+          <Link href="/timetable#tuition">수업 · 교습비 안내 →</Link>
         </p>
       </div>
     </section>

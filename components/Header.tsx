@@ -32,7 +32,7 @@ export default function Header() {
         </div>
       </div>
       <nav className={open ? "open" : ""}>
-        <Link href="/timetable" onClick={close}>시간표</Link>
+        <Link href="/timetable" onClick={close}>수업 안내</Link>
         <a
           href="https://blog.naver.com/exclamathma"
           target="_blank"

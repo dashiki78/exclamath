@@ -14,7 +14,7 @@ export default function Home() {
       <JsonLd />
       <RevealInit />
       <Hero />
-      {/* TODO(2026-10-02): 개강 블록 제거 또는 1월 회차로 교체 */}
+      {/* 모집 안내 — 개별맞춤교수로 시작하는 운영 방식 (2026-10-31) */}
       <OpeningBlock />
       <Philosophy />
       <GoalBand />
