@@ -1,6 +1,9 @@
 import Link from "next/link";
 
-// 모집 안내 — 2026-10-31 운영 방식 변경(신입생은 개별맞춤교수로 시작, 조건이 맞으면 판서식 반 구성).
+// 모집 안내 — 2026-11-01 운영 방침. 판서식 반 수업과 개별맞춤교수는 각각 장점이 있는 독립적인 정규 수업.
+// 기존 판서식 반과 과정·수준·시간이 맞는 신규 학생은 그 반에서 바로 시작할 수 있고, 맞는 반이 없거나
+// 개별 진도·설명이 필요한 학생, 개별맞춤교수를 희망하는 학생은 개별맞춤교수로 시작한다.
+// 개별맞춤교수를 모든 신입생이 거치는 입학 단계·준비반처럼 쓰지 않는다.
 // 새 시간표가 확정되기 전까지 반·시간·정원·잔여석을 여기에 만들지 않는다.
 // 전화는 방문 상담 일정을 잡는 창구 — 시간·과정 안내는 방문 상담에서 한다고 쓴다.
 
@@ -10,33 +13,33 @@ export default function OpeningBlock() {
       <div className="wrap">
         <span className="eyebrow reveal">모집 안내</span>
 
-        <h2 className="sec-title reveal">수업은 개별맞춤교수에서 시작합니다</h2>
+        <h2 className="sec-title reveal">판서식 반 수업과 개별맞춤교수를 운영합니다</h2>
         <ul className="seat-list reveal">
-          <li className="seat-join">
-            <span className="seat-row">
-              <strong>개별맞춤교수</strong>
-            </span>
-            <span className="seat-pitch">
-              상담이나 한 번의 테스트만으로 학생의 학습 상태를 충분히 파악하기는 어렵습니다.
-              그래서 신입생은 이 수업으로 시작합니다. 실제로 가르치면서 학생의 개념 이해도와
-              학습 속도, 문제를 해결하는 방식을 살펴봅니다.
-            </span>
-          </li>
           <li className="seat-join">
             <span className="seat-row">
               <strong>판서식 반 수업</strong>
             </span>
             <span className="seat-pitch">
-              이후 학습 과정과 수준이 비슷하고 수업 시간이 맞는 학생들이 모이면 판서식 반을
-              구성할 수 있습니다. 모든 학생이 반으로 옮기는 것은 아니며, 학생에게 적합하다면
-              개별맞춤교수를 계속합니다. 두 수업은 우열이 없는 정규 수업입니다.
+              상담에서 희망하는 수업 방식과 가능한 시간을 듣고, 학생의 학습 과정과 이해 수준을
+              확인해 수업을 안내합니다. 기존 판서식 반과 과정·수준·시간이 맞는 학생은 그 반에서
+              바로 수업을 시작할 수 있습니다.
+            </span>
+          </li>
+          <li className="seat-join">
+            <span className="seat-row">
+              <strong>개별맞춤교수</strong>
+            </span>
+            <span className="seat-pitch">
+              맞는 반이 없거나 개별적인 진도와 설명이 필요한 학생, 개별맞춤교수를 희망하는
+              학생에게는 개별맞춤교수를 안내합니다. 개별맞춤교수를 계속할 수도 있고, 이후 학습
+              과정과 수준, 시간이 맞는 학생들이 모이면 새로운 판서식 반을 구성할 수도 있습니다.
             </span>
           </li>
         </ul>
 
         <p className="opening-confirm reveal">
-          현재 개별맞춤교수 신입생을 모집하고 있습니다. 수업 가능한 시간과 학생에게 맞는
-          학습 과정은 방문 상담에서 안내해 드립니다.
+          어느 수업으로 시작하든 실제 학습 과정을 살피며 학생에게 필요한 지도를 이어갑니다.
+          등록 가능한 판서식 반과 개별맞춤교수의 요일·시간은 방문 상담에서 안내해 드립니다.
         </p>
 
         <p className="opening-link reveal">

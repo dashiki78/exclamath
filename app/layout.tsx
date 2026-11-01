@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://exclamath.com"),
   title: "느낌표수학학원 | 주엽동 초·중·고 수학전문 · 일산서구",
   description:
-    "주엽동 수학학원 느낌표수학. 노력은 방향이 맞아야 실력이 됩니다. 잘하는 아이도, 애쓰는 아이도 지금 맞는 방향인지 직접 듣고 같이 봅니다. 개별맞춤교수로 시작, 판서식 반은 진도로 편성. ☎ 031-912-1538",
+    "주엽동 수학학원 느낌표수학. 노력은 방향이 맞아야 실력이 됩니다. 잘하는 아이도, 애쓰는 아이도 지금 맞는 방향인지 직접 듣고 같이 봅니다. 판서식 반 수업과 개별맞춤교수 운영, 반은 진도로 편성. ☎ 031-912-1538",
   alternates: { canonical: "/" },
   verification: {
     google: "VkxIBJQr0wt39KxpBclc1uHg4BVxtlqO41iWoT27a6M",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "느낌표수학학원 | 주엽동 초·중·고 수학전문 · 일산서구",
     description:
-      "주엽동 수학학원 느낌표수학. 노력은 방향이 맞아야 실력이 됩니다. 잘하는 아이도, 애쓰는 아이도 지금 맞는 방향인지 직접 듣고 같이 봅니다. 개별맞춤교수로 시작, 판서식 반은 진도로 편성. ☎ 031-912-1538",
+      "주엽동 수학학원 느낌표수학. 노력은 방향이 맞아야 실력이 됩니다. 잘하는 아이도, 애쓰는 아이도 지금 맞는 방향인지 직접 듣고 같이 봅니다. 판서식 반 수업과 개별맞춤교수 운영, 반은 진도로 편성. ☎ 031-912-1538",
     type: "website",
     locale: "ko_KR",
     url: "https://exclamath.com",

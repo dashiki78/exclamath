@@ -6,7 +6,7 @@ const data = {
   additionalType: "https://schema.org/EducationalOrganization",
   name: "느낌표수학학원",
   description:
-    "주엽동 초·중·고 수학전문 학원. 초4부터 고등 과정까지. 신입생은 개별맞춤교수로 시작하고, 판서식 반은 학년이 아니라 진도로 편성합니다. 풀이설계력 훈련, 학교별 내신 집중 대비",
+    "주엽동 초·중·고 수학전문 학원. 초4부터 고등 과정까지. 판서식 반 수업과 개별맞춤교수를 운영하고, 반은 학년이 아니라 진도로 편성합니다. 풀이설계력 훈련, 학교별 내신 집중 대비",
   url: "https://exclamath.com",
   image: "https://exclamath.com/opengraph-image",
   telephone: "+82-31-912-1538",

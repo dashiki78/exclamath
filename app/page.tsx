@@ -14,7 +14,7 @@ export default function Home() {
       <JsonLd />
       <RevealInit />
       <Hero />
-      {/* 모집 안내 — 개별맞춤교수로 시작하는 운영 방식 (2026-10-31) */}
+      {/* 모집 안내 — 판서식 반 수업과 개별맞춤교수, 둘 다 바로 시작 가능 (2026-11-01 운영 방침) */}
       <OpeningBlock />
       <Philosophy />
       <GoalBand />
